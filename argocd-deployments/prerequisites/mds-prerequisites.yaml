@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ovia-prerequisites-syncers
+spec:
+  project: default
+  source:
+    repoURL: https://bitbucket.gob.amadeus.net/scm/ovia-cd/ovia-gitops.git
+    targetRevision: HEAD
+    path: src/argocd/tst/prerequisites/ovia-prerequisites-syncers
+  destination:
+    name: in-cluster
+    namespace: argocd-ovia-tst
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - ApplyOutOfSyncOnly=true 
