@@ -4,5 +4,5 @@ description: The proxy Helm Chart targeting the cross-cluster-operator Helm char
 version: 0.1.0
 dependencies:
   - name: abr-example-pod
-    version: latest
+    version: "*"
     repository: dockerhub.rnd.amadeus.net/obeimages-docker-release/obe-tools/rhel-obe
