@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ovia-prerequisites-syncers
+  name: abr-local-test
 spec:
   project: default
   source:
