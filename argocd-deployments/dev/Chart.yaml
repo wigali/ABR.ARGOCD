@@ -1,3 +1,8 @@
 apiVersion: v1
-name: my-spring-boot-app
+name: abr-example
+description: The proxy Helm Chart targeting the cross-cluster-operator Helm chart
 version: 0.1.0
+dependencies:
+  - name: abr-example-pod
+    version: latest
+    repository: dockerhub.rnd.amadeus.net/obeimages-docker-release/obe-tools/rhel-obe

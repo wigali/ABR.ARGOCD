@@ -5,12 +5,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://bitbucket.gob.amadeus.net/scm/ovia-cd/ovia-gitops.git
+    repoURL: https://github.com/wigali/ABR.ARGOCD.git
     targetRevision: HEAD
-    path: src/argocd/tst/prerequisites/ovia-prerequisites-syncers
+    path: argocd-deployments/dev
   destination:
     name: in-cluster
-    namespace: argocd-ovia-tst
+    namespace: defaul
   syncPolicy:
     automated:
       prune: true
