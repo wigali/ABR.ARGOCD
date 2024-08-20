@@ -1,5 +1,5 @@
 image:
-  repository: wilsonggr/my-spring-boot-app
+  repository: dockerhub.rnd.amadeus.net/obeimages-docker-release/obe-tools/rhel-obe
   tag: latest
 #image:
 #  repository: docker.io/wilsonggr/my-spring-boot-app

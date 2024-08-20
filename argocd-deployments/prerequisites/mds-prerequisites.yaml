@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: abr-local-test
+  name: abr-test-argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/wigali/ABR.ARGOCD.git
     targetRevision: HEAD
-    path: argocd-deployments/dev
+    path: argocd-deployments/templates
   destination:
     name: in-cluster
     namespace: defaul

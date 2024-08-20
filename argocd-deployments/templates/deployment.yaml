@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: abr-first-image
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: abr-first-image
+  template:
+    metadata:
+      labels:
+        app:abr-first-image
+    spec:
+      containers:
+        - name: abr-first-image
+          image: dockerhub.rnd.amadeus.net/obeimages-docker-release/obe-tools/rhel-obe:latest
+          ports:
+            - containerPort: 8080
