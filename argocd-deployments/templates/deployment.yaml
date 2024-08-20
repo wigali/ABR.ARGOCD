@@ -13,7 +13,7 @@ spec:
         app:abr-first-image
     spec:
       containers:
-        - name: abr-first-image
+        - name: rhel-obe
           image: repository.rnd.amadeus.net/artifactory/obeimages-docker-release/obe-tools/rhel-obe:latest
           ports:
             - containerPort: 8080
