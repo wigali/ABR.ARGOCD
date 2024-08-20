@@ -2,21 +2,18 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: abr-test-argocd
-   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/wigali/ABR.ARGOCD.git
     targetRevision: HEAD
     path: argocd-deployments/templates
-  destination: 
-    server: https://kubernetes.default.svc
-    namespace: myargoapp
-
+  destination:
+    name: in-cluster
+    namespace: defaul
   syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
-
     automated:
-      selfHeal: true
       prune: true
+      selfHeal: true
+    syncOptions:
+      - ApplyOutOfSyncOnly=true 
