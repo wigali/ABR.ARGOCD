@@ -3,17 +3,17 @@ kind: Deployment
 metadata:
   name: abr-first-image
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: abr-first-image
+  replicas: 2
   template:
     metadata:
       labels:
-        app:abr-first-image
+        app: abr-first-image
     spec:
       containers:
-        - name: my-spring-boot-app
-          image: wilsonggr/my-spring-boot-app:latest
-          ports:
-            - containerPort: 8080
+      - name: test-argocd-service
+        image: wilsonggr/my-spring-boot-app
+        ports:
+        - containerPort: 3000
